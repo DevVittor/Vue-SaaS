@@ -6,7 +6,7 @@
 </script>
 
 <template>
-  <header class="sticky top-0 z-50 bg-whitte border-b dark:bg-dark border-zinc-200 dark:border-zinc-800 ">
+  <header class="sticky top-0 z-50 bg-whitte border-b dark:bg-dark bg-white border-zinc-200 dark:border-zinc-800 ">
     <div class="flex items-center justify-between px-[30px] py-[10px]">
       <div class="">
         <RouterLink to="/"><h1 class="text-4xl font-bold dark:text-white">ABRIME</h1></RouterLink>
