@@ -1,4 +1,5 @@
 <script setup>
+    document.title = "AcompX - Acessar"
     import axios from 'axios';
     import {ref} from 'vue';
 

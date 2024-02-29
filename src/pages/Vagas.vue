@@ -1,4 +1,5 @@
 <script setup>
+document.title = "AcompX - Anúncios"
     import { RouterLink } from 'vue-router';
     import axios from 'axios';
     import {ref} from 'vue';
@@ -21,7 +22,7 @@
             </li>
         </ul>
     </nav>
-    <RouterLink :to="`/vagas/${id}`">
+    <RouterLink :to="`/anuncios/${id}`">
         <h1>Profile</h1>
     </RouterLink>
 </template>

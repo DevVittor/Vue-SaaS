@@ -1,4 +1,5 @@
 <script setup>
+    document.title = "AcompX - Anúnciar"
     import axios from 'axios';
     import {watch, ref} from 'vue';
 

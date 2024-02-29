@@ -1,4 +1,5 @@
 <script setup>
+document.title = "AcompX - Cadastrar";
 import axios from 'axios';
 import { ref } from 'vue';
 

@@ -4,7 +4,6 @@ import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import Inicio from './pages/Inicio.vue';
 import Vagas from './pages/Vagas.vue';
-import Contato from './pages/Contato.vue';
 import Cadastrar from './pages/Cadastrar.vue';
 import Acessar from './pages/Acessar.vue';
 import Perfil from './pages/Profile.vue';
@@ -18,16 +17,12 @@ const router = createRouter({
             component: Inicio
         },
         {
-            path: "/vagas",
+            path: "/anuncios",
             component: Vagas
         },
         {
-            path: "/vagas/:id",
+            path: "/anuncios/:id",
             component: Demo
-        },
-        {
-            path: "/contato",
-            component: Contato
         },
         {
             path: "/cadastrar",
@@ -38,7 +33,7 @@ const router = createRouter({
             component: Acessar
         },
         {
-            path: "/criar",
+            path: "/anunciar",
             component: Perfil
         },
     ]
