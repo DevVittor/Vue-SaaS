@@ -3,11 +3,14 @@ import { Flame, ShieldCheck, PhoneCall, Fullscreen, ShieldAlert } from 'lucide-v
 import { Vue3Marquee } from 'vue3-marquee'
 const valores = Array.from({ length: 53 }, (_, i) => `serviços${i + 1}`);
 document.title = "AcompX - Jéssica Gomes"
+import useWindowHeight from '../middlewares/useWindowHeight.js';
+let windowHeight = useWindowHeight();
 </script>
 <template>
     <main>
         <section>
-            <div class="flex justify-center items-center flex-wrap h-[93.6vh] w-[100%] dark:bg-dark">
+            <div class="flex justify-center items-center flex-wrap w-[100%] dark:bg-dark"
+                :style="{ height: (windowHeight) + 'px' }">
                 <div
                     class="h-full w-[20%] dark:bg-dark border-r-2 gap-1.5 dark:border-zinc-800 border-zinc-200 flex justify-between p-3 flex-col">
                     <div class="flex items-center justify-between flex-wrap  w-full gap-2">
@@ -22,7 +25,7 @@ document.title = "AcompX - Jéssica Gomes"
                             <span>Perfil Verificado</span>
                         </div>
                     </div>
-                    <div class="flex flex-col ">
+                    <div class="flex flex-wrap flex-col ">
                         <h1 class="dark:text-white text-4xl font-bold">Jéssica Gomes</h1>
                         <h3 class="text-lg dark:text-zinc-200 text-zinc-700">São Paulo, SP</h3>
                     </div>
@@ -32,41 +35,41 @@ document.title = "AcompX - Jéssica Gomes"
                             totam ipsum nemo at reprehenderit, autem tempora accusantium tenetur suscipit earum maiores
                             perferendis explicabo.</p>
                     </div>
-                    <div class="w-full flex flex-col gap-1.5 dark:text-white">
+                    <div class="w-full flex flex-wrap flex-col gap-1.5 dark:text-white">
                         <div
-                            class="w-full flex justify-between items-center px-3 border dark:border-zinc-700 border-zinc-200 py-2 ">
+                            class="w-full flex flex-wrap justify-between items-center px-3 border dark:border-zinc-700 border-zinc-200 py-2 ">
                             <span>Gênero</span>
                             Mulher
                         </div>
                         <div
-                            class="w-full flex justify-between items-center px-3 border dark:border-zinc-700 border-zinc-200 py-2 ">
+                            class="w-full flex flex-wrap justify-between items-center px-3 border dark:border-zinc-700 border-zinc-200 py-2 ">
                             <span>Etnia</span>
                             Branca
                         </div>
                         <div
-                            class="w-full flex justify-between items-center  px-3 border dark:border-zinc-700 border-zinc-200 py-2 ">
+                            class="w-full flex flex-wrap justify-between items-center  px-3 border dark:border-zinc-700 border-zinc-200 py-2 ">
                             <span>Idade</span>
                             24 anos
                         </div>
                         <div
-                            class="w-full flex justify-between items-center  px-3 border dark:border-zinc-700 border-zinc-200 py-2 ">
+                            class="w-full flex flex-wrap justify-between items-center  px-3 border dark:border-zinc-700 border-zinc-200 py-2 ">
                             <span>Altura</span>
                             1.73M
                         </div>
                         <div
-                            class="w-full flex justify-between items-center  px-3 border dark:border-zinc-700 border-zinc-200 py-2 ">
+                            class="w-full flex flex-wrap justify-between items-center  px-3 border dark:border-zinc-700 border-zinc-200 py-2 ">
                             <span>Peso</span>
                             67Kg
                         </div>
                         <div
-                            class="w-full flex justify-between items-center  px-3 border dark:border-zinc-700 border-zinc-200 py-2 ">
+                            class="w-full flex flex-wrap justify-between items-center  px-3 border dark:border-zinc-700 border-zinc-200 py-2 ">
                             <span>Corpo</span>
                             Sarado
                         </div>
                     </div>
 
                     <div
-                        class="h-auto w-full border dark:border-zinc-700 dark:text-zinc-200 border-zinc-200 flex justify-between items-center">
+                        class="h-auto w-full border dark:border-zinc-700 dark:text-zinc-200 border-zinc-200 flex flex-wrap justify-between items-center">
                         <div class="">
                             <nav>
                                 <ul class="flex flex-col font-medium text-sm leading-[18px] p-2">
@@ -83,7 +86,7 @@ document.title = "AcompX - Jéssica Gomes"
                         </div>
                         <div class="">
                             <nav>
-                                <ul class="flex flex-col font-medium text-sm leading-[18px] p-2">
+                                <ul class="flex items-end flex-col font-medium text-sm leading-[18px] p-2">
                                     <li>14:00 - 17:00</li>
                                     <li>04:00 - 12:00</li>
                                     <li>10:00 - 13:00</li>
@@ -152,7 +155,7 @@ document.title = "AcompX - Jéssica Gomes"
                             :direction="'normal'">
                             <span
                                 class="mx-1 px-3 border dark:border-zinc-700 dark:text-white border-zinc-400 py-1 hover:cursor-pointer"
-                                v-for="item in valores" :key="item.id">
+                                v-for=" item  in  valores " :key="item.id">
                                 {{ item }}
                             </span>
                         </Vue3Marquee>
@@ -190,7 +193,6 @@ document.title = "AcompX - Jéssica Gomes"
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
